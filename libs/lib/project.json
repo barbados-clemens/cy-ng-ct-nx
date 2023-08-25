@@ -26,6 +26,15 @@
       "options": {
         "lintFilePatterns": ["libs/lib/**/*.ts", "libs/lib/**/*.html"]
       }
+    },
+    "component-test": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "libs/lib/cypress.config.ts",
+        "testingType": "component",
+        "skipServe": true,
+        "devServerTarget": "demo:build"
+      }
     }
   }
 }
